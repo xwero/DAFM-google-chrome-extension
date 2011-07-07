@@ -7,4 +7,8 @@ Introduction
 DAFM is an acronym for download audio file via metadata file.
 
 It adds a contextmenu item that reads the content of an .m3u file
-and loads the medai file url in a new tab.
+and loads the media file url in a new tab.
+
+Versions
+--------
+v0.1 : working prototype
