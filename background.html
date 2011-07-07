@@ -1,0 +1,23 @@
+<script>
+function menuClick(info, tab) {
+	var xhr = new XMLHttpRequest();
+	xhr.overrideMimeType("text"); 
+	xhr.open("GET", info.linkUrl, true);
+	xhr.onreadystatechange = function() {
+		if (xhr.readyState == 4 && xhr.status == 200) {
+			// TODO : add audiofile check 
+			chrome.tabs.create({"url":xhr.responseText, "selected":true});
+		}
+	}
+	xhr.send();
+}
+
+// Create one test item for each context type.
+var contexts = ["link"];
+for (var i = 0; i < contexts.length; i++) {
+	var context = contexts[i],
+		title = "Download audio file";
+
+	chrome.contextMenus.create({"title": title, "contexts":[context],"onclick": menuClick});
+}
+</script>

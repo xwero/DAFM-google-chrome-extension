@@ -1,0 +1,7 @@
+﻿{
+	"name": "Download playlist content",
+	"description": "Loads audiofile from a metafile in new tab",
+	"version": "0.1",
+	"permissions": ["tabs","contextMenus","http://*/"],
+	"background_page": "background.html"
+}
